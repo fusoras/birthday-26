@@ -24,3 +24,4 @@ pnpm-debug.log*
 .idea/
 # other
 test.astro
+pnpm-lock.yaml
