@@ -22,13 +22,13 @@ import CardMusic from "@/components/CardMusic.astro"
 					<div class="container-teto">
 					<video 
 						id="teto-video" 
-						src="/videos/kasane-teto.mp4" 
-						poster="/imgs/kasane-teto.avif"
+						src={`${ROUTES.ROOT}/videos/kasane-teto.mp4`} 
+						poster={`${ROUTES.ROOT}/imgs/kasane-teto.avif`}
 						muted 
 						class="kasane-teto-media">
 					</video>
 					</div>
-				<PlayTetoBirthday client:load targetSelector="#teto-video" />
+				<PlayTetoBirthday client:load videoTargetSelector="#teto-video" />
 			</ButtonModal>
 		</section>
 

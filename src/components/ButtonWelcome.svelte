@@ -1,11 +1,12 @@
-<script>
+<script lang="ts">
     import '@/styles/button-welcome.css';
     import { NAME } from 'astro:env/client';
+    import { ROUTES } from '@/config.ts';
 
     export let src = '';
 
     let audioPlayed = false;
-    let audioRef;
+    let audioRef: HTMLAudioElement | undefined;
 
     const audioSrc = "/audios/ado-elf-off-vocal.opus";
     const audioVolume = 0.2;
@@ -16,7 +17,7 @@
     }
 
     function handleClick() {
-        if (!audioPlayed) {
+        if (!audioPlayed && audioRef) {
             audioRef.play();
             audioPlayed = true;
         }

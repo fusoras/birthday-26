@@ -7,6 +7,8 @@ import svelte from '@astrojs/svelte';
 
 // https://astro.build/config
 export default defineConfig({
+  site: 'https://fusoras.github.io',
+  base: '/birthday-26',
   integrations: [svelte()],
 
   vite: {
@@ -15,7 +17,7 @@ export default defineConfig({
 
   env: {
     schema: {
-        NAME: envField.string({ context: 'client', access: 'public', default: 'Nombre' }),
+        NAME: envField.string({ context: 'client', access: 'public', default: 'Name' }),
         URL: envField.string({ context: 'client', access: 'public', default: '' }),
         PRESENTATION_TITLE: envField.string({ context: 'client', access: 'public', default: 'Hola' }),
         PRESENTATION_P_1: envField.string({ context: 'client', access: 'public', default: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' }),
