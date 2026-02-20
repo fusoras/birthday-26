@@ -8,7 +8,7 @@
     let audioPlayed = false;
     let audioRef: HTMLAudioElement | undefined;
 
-    const audioSrc = "/audios/ado-elf-off-vocal.opus";
+    const audioSrc = `${ROUTES.ROOT}/audios/ado-elf-off-vocal.opus`;
     const audioVolume = 0.2;
 
     $: if (audioRef) {
