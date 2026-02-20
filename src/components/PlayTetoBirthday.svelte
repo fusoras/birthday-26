@@ -1,11 +1,10 @@
-<script>
+<script lang="ts">
     import { onMount } from "svelte";
     import { ROUTES } from "@/config.ts";
 
-    export let targetSelector = ".kasane-teto-media";
-
-    let audioRef;
-    let mediaEl;
+    let audioRef: HTMLAudioElement | undefined;
+    let mediaEl: HTMLVideoElement | undefined;
+    export let videoTargetSelector = ".kasane-teto-media";
 
     const audioSrc = `${ROUTES.ROOT}/audios/happy-birthday-teto.opus`;
     const audioVolume = 0.5;
@@ -16,7 +15,10 @@
     }
 
     onMount(() => {
-        mediaEl = document.querySelector(targetSelector);
+        const element = document.querySelector(videoTargetSelector);
+        if (element instanceof HTMLVideoElement) {
+            mediaEl = element;
+        }
     });
 
     function handleClick() {
