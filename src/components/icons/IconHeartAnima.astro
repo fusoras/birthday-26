@@ -1,4 +1,3 @@
-<!-- From Uiverse.io by catraco --> 
 <div class="heart-container" title="Like">
             <input type="checkbox" class="checkbox" id="Give-It-An-Id">
             <div class="svg-container">
@@ -21,9 +20,9 @@
             </div>
         </div>
 <style>
-  /* From Uiverse.io by catraco */ 
 .heart-container {
-  --heart-color: rgb(255, 91, 137);
+  --heart-color: rgb(255 91 137);
+
   position: relative;
   width: 100%;
   height: 100%;
@@ -45,6 +44,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.svg-container svg {
+  --size: 70px;
+
+  width: var(--size);
+  height: var(--size);
 }
 
 .heart-container .svg-outline,
